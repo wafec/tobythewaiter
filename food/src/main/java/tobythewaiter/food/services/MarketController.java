@@ -5,10 +5,10 @@ import org.apache.log4j.Logger;
 import org.dozer.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import tobythewaiter.bone.viewmodel.MarketCreate;
+import tobythewaiter.bone.viewmodel.MarketView;
 import tobythewaiter.food.model.Market;
 import tobythewaiter.food.repos.MarketRepository;
-import tobythewaiter.food.viewmodel.MarketCreate;
-import tobythewaiter.food.viewmodel.MarketView;
 
 import java.util.Optional;
 

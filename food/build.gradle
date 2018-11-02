@@ -13,7 +13,12 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-version = "1.0.0.BEAGLE"
+bootJar {
+    baseName = "tobythewaiter-food"
+    version = "1.0.0.AKITA"
+}
+
+version = "1.0.0.AKITA"
 
 repositories {
     mavenCentral()
@@ -31,15 +36,12 @@ dependencies {
     compile("org.liquibase:liquibase-core")
     compileOnly("org.projectlombok:lombok:1.18.2")
 	testCompile("junit:junit")
+
+    compile project(":bone")
 }
 
 configurations {
     all {
         exclude group: "org.springframework.boot", module: "spring-boot-starter-logging"
     }
-}
-
-bootJar {
-    baseName = "tobythewaiter-food"
-    version = "1.0.0.BEAGLE"
 }
