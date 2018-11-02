@@ -1,0 +1,13 @@
+apply plugin: 'java'
+
+version = "1.0.0.AZAWAKH"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("com.fasterxml.jackson.core:jackson-databind:2.9.7")
+    compileOnly("org.projectlombok:lombok:1.18.2")
+    testCompile("junit:junit:4.12")
+}
