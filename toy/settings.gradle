@@ -1,0 +1,4 @@
+rootProject.name = "tobythewaiter.toy"
+
+include ":bone"
+project(':bone').projectDir = new File(settingsDir, '../bone')
