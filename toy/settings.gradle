@@ -1,4 +1,5 @@
 rootProject.name = "tobythewaiter.toy"
 
-include ":bone"
+include ":bone", ":food"
 project(':bone').projectDir = new File(settingsDir, '../bone')
+project(':food').projectDir = new File(settingsDir, '../food')
