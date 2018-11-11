@@ -1,0 +1,42 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+bootJar {
+    baseName = 'tobythewaiter-house'
+    version = '1.0.0.AUSTRALIAN_SHEPHERD'
+}
+
+version = '1.0.0.AUSTRALIAN_SHEPHERD'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile("org.springframework.boot:spring-boot-devtools")
+    compile("org.springframework.boot:spring-boot-starter-log4j2")
+    compile("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.3.0")
+    compileOnly("org.projectlombok:lombok:1.18.2")
+    compile project(":bone")
+	compile project(":toy")
+    testCompile("junit:junit")
+}
+
+configurations {
+    all {
+        exclude group: "org.springframework.boot", module: "spring-boot-starter-logging"
+    }
+}
